@@ -10,12 +10,12 @@ export async function GET(req: Request) {
 
   if (!host) return new NextResponse("missing domain", { status: 400 });
 
-  if (host === "dksind.tech" || host === "saas.dksind.tech") {
+  if (host === "vps66230.publiccloud.com.br") {
     return new NextResponse("ok", { status: 200 });
   }
 
-  if (host.endsWith(".dksind.tech")) {
-    const subdomain = host.slice(0, -".dksind.tech".length);
+  if (host.endsWith(".vps66230.publiccloud.com.br")) {
+    const subdomain = host.slice(0, -".vps66230.publiccloud.com.br".length);
     if (!/^[a-z0-9-]{2,63}$/.test(subdomain)) {
       return new NextResponse("forbidden", { status: 403 });
     }

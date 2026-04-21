@@ -151,7 +151,7 @@ function SignupForm() {
                   className="flex-1 px-6 py-5 bg-white/5 border border-white/10 rounded-l-2xl focus:ring-2 focus:ring-emerald-500 outline-none text-white font-bold transition-all text-right"
                 />
                 <div className="px-6 py-5 bg-white/10 border border-white/10 border-l-0 rounded-r-2xl text-emerald-400 font-black text-sm uppercase tracking-tighter">
-                  .dksind.tech
+                  .vps66230.publiccloud.com.br
                 </div>
               </div>
               <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest ml-4 mt-2">

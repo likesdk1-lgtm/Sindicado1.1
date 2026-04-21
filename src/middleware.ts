@@ -5,8 +5,8 @@ export function middleware(req: NextRequest) {
   const url = req.nextUrl;
   const hostname = req.headers.get('host') || '';
 
-  // DOMÍNIO PRINCIPAL (dksind.tech)
-  const rootDomain = 'dksind.tech';
+  // DOMÍNIO PRINCIPAL
+  const rootDomain = 'vps66230.publiccloud.com.br';
   
   // Ignorar arquivos estáticos, APIs internas e Next.js internals
   if (

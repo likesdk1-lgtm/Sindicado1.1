@@ -29,14 +29,15 @@ services:
     container_name: dksind_app
     restart: always
     environment:
-      - DATABASE_URL=${DATABASE_URL:-file:./prisma/dev.db}
-      - NEXTAUTH_URL=${NEXTAUTH_URL:-https://dksind.tech}
+      - DATABASE_URL=${DATABASE_URL:-file:/data/dev.db}
+      - NEXTAUTH_URL=${NEXTAUTH_URL:-https://vps66230.publiccloud.com.br}
       - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
-      - NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL:-https://dksind.tech}
-      - NEXT_PUBLIC_EVOLUTION_URL=${NEXT_PUBLIC_EVOLUTION_URL:-http://evolution:8080}
+      - NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL:-https://vps66230.publiccloud.com.br}
+      - NEXT_PUBLIC_EVOLUTION_URL=${NEXT_PUBLIC_EVOLUTION_URL:-https://vps66230.publiccloud.com.br/evolution}
+      - EVOLUTION_URL=${EVOLUTION_URL:-http://evolution:8080}
       - EVOLUTION_API_KEY=${EVOLUTION_API_KEY:-SINDICATO_TOKEN}
     volumes:
-      - sqlite_data:/app/prisma
+      - sqlite_data:/data
     command: sh -c "npx prisma migrate deploy && npm start"
     depends_on:
       - evolution

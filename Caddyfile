@@ -17,7 +17,6 @@
     encode gzip
 
     @evolution {
-        host saas.dksind.tech
         path /evolution/*
     }
     handle @evolution {
